@@ -1,0 +1,46 @@
+h1{
+    margin: 10px 0px -10px 15px;
+}
+.firstList{
+    list-style-type: none;
+    margin-top: -8px;
+    font-weight: lighter;
+    position: relative;
+    right:17px;
+    font-size: 20px;
+}
+.sun{
+    font-size: 60px;
+}
+.number{
+    font-size: 60px;
+    font-weight: lighter;
+}
+.degree{
+    position:relative;
+    top:-30px;
+}
+.secondList{
+    list-style-type: none;
+    position: relative;
+    top:-75px;
+    right:-250px;
+    font-size: 20px;
+}
+header{
+    background-size: 70% 70%;
+    padding: 0px 20px;
+    border:2px solid black;
+    max-width:500px;
+    margin: 20px 0px 0px 40px;
+}
+footer{
+    margin: 5px 35px;
+}
+a{
+    text-decoration: none;
+}
+form{
+
+    margin: 10px 10px;
+}
