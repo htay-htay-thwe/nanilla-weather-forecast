@@ -27,9 +27,9 @@ timeElement.innerHTML = showDate(currentTime);
 function showTemperature(response) {
   document.querySelector("#Name").innerHTML = response.data.name;
 
-  celsiusTemperature = response.data.main.temp;
+  
   document.querySelector("#temperatureNumber").innerHTML =
-    Math.round(celsiusTemperature);
+    Math.round(response.data.main.temp);
 
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = `Humidity : ${response.data.main.humidity}%`;
@@ -55,7 +55,5 @@ function showPosition(event) {
   axios.get(apiUrl).then(showTemperature);
 }
 let searching = document.querySelector("#search");
-searching.addEventListener("click", showPosition);
-let celsiusTemperature = null;
+searching.addEventListener("click",showPosition);
 
-search("New York");
