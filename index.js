@@ -20,6 +20,31 @@ function showDate(time) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast(){
+  let forecastElement=document.querySelector("#forecast");
+  let days = ["Sun", "Mon", "Tues"];
+  let forecastHTML=`<div class="row">`;
+  days.forEach(function(day){
+forecastHTML =forecastHTML +
+  ` <div class="col-2">
+            Mon
+             <p class="iconic">
+                <img src="https://openweathermap.org/img/wn/10d@2x.png">
+                </p>
+                <div class="something">
+                <span class="three">
+                33°</span>
+                <span class="six">36° </span>
+            </div>
+        </div>`;
+forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
+  });
+  
+}
+
+
+
 let currentTime = new Date();
 let timeElement = document.querySelector("#time");
 timeElement.innerHTML = showDate(currentTime);
@@ -48,7 +73,7 @@ function showTemperature(response) {
 
 function showPosition(event) {
   event.preventDefault();
-  let apiKey = "4d2c1bb3fb6e6c93ebaf9e2d8816b5ae";
+  let apiKey = "97f8e93f00107773f88eafd933ce86b7";
   let cityName = document.querySelector("#forming").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
   console.log(apiUrl);
@@ -57,3 +82,4 @@ function showPosition(event) {
 let searching = document.querySelector("#search");
 searching.addEventListener("click",showPosition);
 
+displayForecast()
