@@ -52,7 +52,7 @@ function showTemperature(response) {
 
 function showPosition(event) {
   event.preventDefault();
-  let apiKey = "4d2c1bb3fb6e6c93ebaf9e2d8816b5ae";
+  let apiKey = "97f8e93f00107773f88eafd933ce86b7";
   
   let cityName = document.querySelector("#forming").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
